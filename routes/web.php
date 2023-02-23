@@ -20,10 +20,9 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-
     Route::get('products/{product}/report', [ProductController::class, 'report'])->name('products.report');
     Route::get('/', function () {
         return view('vendor.voyager.dashboards.index');
-    })->name('voyager.dashboard');
+    })->middleware('auth')->name('voyager.dashboard');
+    Voyager::routes();
 });
