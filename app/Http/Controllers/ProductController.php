@@ -49,7 +49,7 @@ class ProductController extends Controller
                 'remaining_stock' => [
                     'qty' => $incomingStock->sum('qty') - $outgoingStock->sum('qty'),
                     'price' => $product->price,
-                    'total_price' => $outgoingStock->sum('total_price') - $outgoingStock->sum('total_price'),
+                    'total_price' => $incomingStock->sum('total_price') - $outgoingStock->sum('total_price'),
                 ]
             ];
         }
