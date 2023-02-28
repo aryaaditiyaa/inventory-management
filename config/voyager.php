@@ -192,6 +192,7 @@ return [
 
     'additional_js' => [
         'js/google-chart.js',
+//        'js/jquery-3.6.3.min.js'
     ],
 
     'googlemaps' => [
