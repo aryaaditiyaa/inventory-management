@@ -163,6 +163,10 @@
         remaining_stock_sum_total_price += parseFloat($(this).text());
     });
     $('#remaining_stock_sum_total_price').html(remaining_stock_sum_total_price)
+
+    window.onload = function () {
+        window.print();
+    }
 </script>
 </body>
 </html>
